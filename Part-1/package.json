@@ -1,0 +1,25 @@
+{
+  "name": "part1",
+  "version": "1.0.0",
+  "description": "Calculations web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhhhhaaaa/Phase-3-Challenge.git"
+  },
+  "author": "Doug L.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hhhhhaaaa/Phase-3-Challenge/issues"
+  },
+  "homepage": "https://github.com/hhhhhaaaa/Phase-3-Challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0"
+  }
+}
