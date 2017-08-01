@@ -144,7 +144,7 @@ $ ./store real-shoppers
 ```
 
 ### Requirements
-- [ ] __10:__ All files are stored under the `part-2/` folder
+- [X] __10:__ All files are stored under the `part-2/` folder
 - [ ] __10:__ Database schema (all `CREATE TABLE` statements) is defined in a file `schema.sql`
 - [ ] __10:__ SQL script to insert [grocery seed data][grocery-data] and load from CSV is created in a file `load-data.sql`
 - [ ] __10:__ SQL statements to insert data into the `orders` and `shoppers` table is added to the file `load-data.sql`. (Add at least 5 rows in each table)
@@ -192,7 +192,7 @@ Clicking on the "Cart" button opens the cart modal.
 - [X] __20:__ Clicking on the "Cart" button will show the cart modal with a list of all items added
 - [X] __20:__ Clicking on the "Clear" button in the cart modal removes all items from the cart
 - [X] __20:__ Clicking on the "X" button in the cart modal closes the modal
-- [ ] __20:__ The "Total" in the cart modal shows the calculated sum of all item prices
+- [X] __20:__ The "Total" in the cart modal shows the calculated sum of all item prices
 
 [grocery-data]: https://gist.github.com/lg-bot/1be9e9b91fc0f972b74b72df34c99d3d#file-grocery-csv
 [grocer-html]: https://gist.github.com/lg-bot/1be9e9b91fc0f972b74b72df34c99d3d#file-grocer-html

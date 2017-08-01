@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Command line grocery store app",
   "main": "app.js",
-  "directories": {
-    "test": "test",
-    "start": "nodemon"
-  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "nodemon",
+    "db:create": "createdb grocery_store && psql grocery_store -f schema.sql",
+    "db:load": "psql grocery_store -f schema.sql",
+    "db:loaddata": "psql grocery_store -f load-data.sql",
+    "db:drop": "psql grocery_store -c 'DROP TABLE order_list; DROP TABLE orders; DROP TABLE groceries; DROP TABLE shoppers;'",
+    "db:delete": "dropdb grocery_store"
   },
   "repository": {
     "type": "git",
