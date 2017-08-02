@@ -1,4 +1,4 @@
-\copy groceries(name, price, selection) FROM './grocery.csv' WITH DELIMITER ',' CSV HEADER
+\copy groceries(name, price, section) FROM './grocery.csv' WITH DELIMITER ',' CSV HEADER
 
 INSERT INTO shoppers (name) VALUES ('John');
 INSERT INTO shoppers (name) VALUES ('Paul');
