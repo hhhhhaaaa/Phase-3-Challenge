@@ -4,7 +4,7 @@
   "description": "Calculations web app",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",

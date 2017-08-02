@@ -36,7 +36,6 @@ The web server should provide the following routes:
 ```
 GET /api/days/:day
 POST /api/array/concat
-POST /api/array/length
 ```
 
 #### Route 1: GET /api/days/:day
