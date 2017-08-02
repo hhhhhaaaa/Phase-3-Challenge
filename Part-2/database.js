@@ -7,7 +7,6 @@ function productList(searchTerm){
     SELECT name, section FROM groceries
     WHERE section = $1;
     `), [searchTerm]);
-    pgp.end;
 }
 
 function shopperOrders(searchTerm){
@@ -18,7 +17,6 @@ function shopperOrders(searchTerm){
     WHERE orders.shopper_id = $1
     GROUP BY orders.id;
     `), [searchTerm]);
-    pgp.end;
 }
 
 function realShoppers(){
@@ -28,7 +26,6 @@ function realShoppers(){
     GROUP BY shoppers.name
     ORDER BY COUNT(*) ASC;
     `), []);
-    pgp.end;
 }
 
 module.exports = {

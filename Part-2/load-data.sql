@@ -4,7 +4,7 @@ INSERT INTO shoppers (name) VALUES ('John');
 INSERT INTO shoppers (name) VALUES ('Paul');
 INSERT INTO shoppers (name) VALUES ('George');
 INSERT INTO shoppers (name) VALUES ('Ringo');
-INSERT INTO shoppers (name) VALUES ('Mojojojo');
+INSERT INTO shoppers (name) VALUES ('Maxwell');
 
 INSERT INTO orders (shopper_id) VALUES (1);
 INSERT INTO orders (shopper_id) VALUES (1);
