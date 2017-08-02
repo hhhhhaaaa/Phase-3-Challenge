@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log(process.argv[2]);
+const database = require('./database.js');
+
+console.log("hello");
