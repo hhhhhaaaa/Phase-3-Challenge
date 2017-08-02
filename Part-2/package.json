@@ -5,11 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha $(find test -name 'database_test.j')",
-    "start": "nodemon",
-    "db:create": "createdb grocery_store && psql grocery_store -f schema.sql",
-    "db:load": "psql grocery_store -f schema.sql",
-    "db:loaddata": "psql grocery_store -f load-data.sql",
-    "db:drop": "psql grocery_store -c 'DROP TABLE order_list; DROP TABLE orders; DROP TABLE groceries; DROP TABLE shoppers;'",
+    "db:create": "createdb grocery_store && psql grocery_store -f schema.sql && psql grocery_store -f load-data.sql",
     "db:delete": "dropdb grocery_store"
   },
   "repository": {
@@ -26,7 +22,6 @@
     "body-parser": "^1.17.2",
     "chai": "^4.1.0",
     "mocha": "^3.5.0",
-    "nodemon": "^1.11.0",
     "pg-promise": "^6.3.6"
   }
 }
