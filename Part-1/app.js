@@ -34,7 +34,7 @@ app.get('/api/days/:day', (request, response) => {
         response.json(daysOfWeek.sunday);
         break;
     default:
-        response.status(400).send(`${dayOfWeek} is not a valid day1`);
+        response.status(400).send(`${dayOfWeek} is not a valid day!`);
   }
 });
 
