@@ -4,7 +4,7 @@
   "description": "Command line grocery store app",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha $(find test -name 'database_test.j')",
     "start": "nodemon",
     "db:create": "createdb grocery_store && psql grocery_store -f schema.sql",
     "db:load": "psql grocery_store -f schema.sql",
