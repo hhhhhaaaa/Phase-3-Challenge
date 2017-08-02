@@ -9,12 +9,11 @@ const totalListModal = document.querySelector(".total-list");
 
 let cartArray = [];
 let priceArray = [];
+let total = "";
 
 const itemButton = document.querySelectorAll(".item-button");
 const itemName = document.querySelectorAll(".item-name");
 const itemPrice = document.querySelectorAll(".item-price");
-
-console.log()
 
 cartButton.addEventListener("click", function() {
   cartModal.style.display = "block";
@@ -22,8 +21,12 @@ cartButton.addEventListener("click", function() {
 
 clearModal.addEventListener("click", function() {
   cartArray = [];
+  priceArray = [];
   listModal.innerHTML = "";
   totalListModal.innerHTML = "0.00";
+  cartCount.innerHTML = "0";
+  cartList = "";
+  total = "";
 })
 
 closeModal.addEventListener("click", function() {
@@ -34,20 +37,14 @@ for (i = 0; i < itemButton.length; i++) {
   const itemNameList = itemName[i].innerHTML;
   const itemPriceList = itemPrice[i].innerHTML;
   const itemPriceTotal = Number(itemPrice[i].innerHTML.substring(1));
-  let cartList = "";
   itemButton[i].addEventListener("click", function() {
-    cartArray.push([itemNameList, itemPriceList]);
+    cartArray.push([itemNameList, "<span class='align-right'>", itemPriceList, "</span> <br> <br>"]);
     cartCount.innerHTML = cartArray.length;
-    for (j = 0; j < cartArray.length; j++) {
-      cartList += cartArray[j][0] + '<span class="align-right">'
-      + cartArray[j][1] + "</span> <br> <br>";
-    }
     priceArray.push(itemPriceTotal);
-    const total = priceArray.reduce(function(a,b) {
+    total = priceArray.reduce(function(a,b) {
       return a + b;
     });
-    console.log(total)
-    listModal.innerHTML = cartList;
-    totalListModal.innerHTML = total;
+    listModal.innerHTML = cartArray.join().replace(/[,]/g,'');
+    totalListModal.innerHTML = total.toFixed(2);
   });
 }
