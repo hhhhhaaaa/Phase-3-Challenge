@@ -2,7 +2,7 @@ CREATE TABLE groceries (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50),
   price DECIMAL,
-  selection VARCHAR(50)
+  section VARCHAR(50)
 );
 
 CREATE TABLE shoppers (
