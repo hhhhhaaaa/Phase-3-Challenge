@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -42,8 +42,6 @@ app.post('/api/array/concat', (request, response) => {
   response.contentType('application/JSON');
   const array1 = request.body.array1;
   const array2 = request.body.array2;
-  console.log(typeof array1)
-  // if array1 isn't an object or array2 isn't an object
   if (typeof array1 === "object" && typeof array2 === "object") {
     response.json({"result": array1.concat(array2)});
   }
